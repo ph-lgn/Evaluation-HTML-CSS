@@ -1,0 +1,56 @@
+// *********** 6 before footer 
+.before-footer {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//  *********** 7 footer
+
+footer {
+    background: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+    }
+}
+
+.wrap-footer-left {
+    width: 70%;
+    color: rgb(138, 133, 133);
+    line-height: 25px;
+}
+
+.wrap-footer-right {
+    color: white;
+    .flex-img-txt {
+        display: flex;
+        gap: 25px;
+    }
+    .flex-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        gap: 25px;
+        span {
+            color: white;
+        }
+    }
+}
+
+.img-footer {
+    width: 80%;
+    img {
+    width: 100%;
+}
+}
+

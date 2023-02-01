@@ -15,6 +15,7 @@
         grid-column: span 2 ;
         position: relative;
         border-radius: 25px;
+        
        
     }
     .bloc-img-text2 {
@@ -68,12 +69,14 @@
 
 .overlay::before {
     content: '';
-    background: linear-gradient(0deg, rgb(0, 0, 0) 8%, rgba(22, 22, 22, 0.158) 58%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 8%, rgba(0, 0, 0, 0.068) 58%);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+    
 }
 
 
@@ -88,10 +91,6 @@
 }
 
 // col gauche du grid avec du flex
-.wrap-news {
-    gap: 25px;
-    padding: 25px;
-}
 
 .new1 {
     width: 50%;
@@ -112,14 +111,19 @@
    
 }
 
+.link-news {
+    display: flex;
+    justify-content: space-between;
+}
 
 .new2 {
+    
     div:nth-of-type(1) {
         width: 100%;
         font-weight: 600;
         margin-bottom: 35px;
         a {
-            padding-right: 10px;
+            padding-right: 5px;
             text-decoration: none;
             color: black;
         }
@@ -139,7 +143,9 @@
     div:nth-of-type(2) {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
         span:nth-of-type(1) {
             color: green;
         }
@@ -156,6 +162,7 @@
     gap: 25px;
     background: white;
     margin-bottom: 25px;
+    padding: 25px;
 }
 
 // col droite : fans nombre + article en-dessous
@@ -167,10 +174,11 @@
     padding: 25px;
     background: white;
     gap: 15px;
+    margin-bottom: 30px;
     .border-fans-table {
         gap: 15px ;
         display: flex;
-        border: 1px solid grey;
+        border: 1px solid rgb(194, 188, 188);
         padding: 15px 55px;
         .flex-nbre-fans {
             display: flex;
@@ -188,9 +196,150 @@
   
 }
 
+// article most recent
 .article-most-recent {
     background: white;
+    padding: 15px;
+    width: 100%;
+    .relative-overlay {
+        position: relative;
+    }
     img {
         width: 100%;
     }
 }
+
+.txt-recent {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 20px;
+        background: rgb(175, 31, 175);
+        font-size: 15px;
+        border-radius: 10px;
+        text-transform: uppercase;
+    }
+}
+
+.relative-overlay {
+    margin-bottom: 25px;
+}
+
+.overlay2::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514) 8%, rgba(11, 11, 122, 0.384) 58%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.article-grid-most {
+  display: flex;
+    width: 100%;
+ 
+  img {
+    width: 60%;
+  }
+  .flex-most {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+// *********  4 ARTICLE EN GRID mais sur une ligne avec pub avant travel europe
+
+.article-bottom {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    div:nth-of-type(1) {
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+.grid-article-bottom {
+    width: 100%;
+    background: white;
+    padding: 15px;
+}
+.wrap-article-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    .new1 img {
+        width: 100%;
+    }
+}
+
+
+// *********  5 ARTICLE EN GRID bande blache trending news
+
+.trending-news{
+    background: white;
+    height: 500px;
+  
+}
+.wrap-trending {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   .trending {
+    width: 30%;
+    position: relative;
+ 
+   }
+    img {
+        width: 100%;
+    }
+   }
+.wrap-abs-trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+   
+}
+
+.bg-wrap-abs {
+    width: 70%;
+    height: 30%;
+    background: white;
+    padding: 15px;
+    h5 {
+        font-size: 20px;
+        margin: 0;
+    }
+    span{
+        font-size: 14px;
+    }
+    .flex-icone-play {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            color: rgb(163, 151, 151);
+        }
+    }
+}
+
+
