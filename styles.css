@@ -1,0 +1,181 @@
+/* survole du burger faire revenir un menu écrit */
+/* version large */
+
+body {
+    background: url(../medias/palm.jpg)center/cover;
+    height: 100vh;
+    width: 100vw; 
+    /* position pour mettre le burger en top */
+    position: relative;
+   
+}
+
+/********* menu nav */
+.main-nav {
+
+   text-align: right;
+   /* pourquoi ici margin change le top de burger ET nav ou top and right */
+   top: 50px;
+   right: 50px;
+   /* position */
+   position: fixed;
+   transform: translateX(-100%);
+   transition:.3s all ease-in-out;
+  
+   /* changer 100 vh vw + 4 a qui sont en pile+les regrouper largeur hauteur bg+enfant de nav*/
+  
+    
+}
+
+div a {
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 35px;
+    color: rgb(4, 49, 8);
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+.main-nav a:hover {
+    color: blueviolet;
+}
+
+/************ menu burger */
+
+.burger-menu {
+    
+    position:fixed;
+    top: 30px;
+    right: 20px;
+    border: 4px solid rgb(1, 38, 49);
+    border-radius: 4px;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    /* enfant du body */
+    cursor: pointer;
+    /* où mettre la transi transition: .5s all cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+    
+   
+    
+}
+
+.burger-menu div {
+
+    background: rgb(4, 54, 49);
+    width: 75%;
+    height: 4px;
+    /* mettre les barres dans le cadre du burger-menu */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div .barre-top {
+    top:30%;
+}
+
+div .barre-bottom {
+    top:70%;
+}
+
+.burger-menu:hover {
+   transform: rotate(180deg);
+   border-color: blueviolet;
+   /* transition: .5s all cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+}
+
+
+/*!changement responsive/
+
+/* palier : 0 et 1024 burger et apres jusqu'à la fin menu  + cacher menu*/
+
+
+
+
+@media screen and (max-width:1024px) {
+
+    /* entre 0 et 1024 main nav se barre cacher le menu écrit quand écran petit*/
+    /* la main-nav n'est pas vraiment cachée donc refaire css et mettre les a dans une div+ display bloc pour pile de a*/
+   
+    .main-nav {
+        position: relative;
+        height: 100vh;
+        /* éviter scroll remettre le tout--> accrocher au top */
+        top: 0;
+        left: 0;
+    }
+
+     /* faire apparaitre le menu avec bg puis  faire une transition qui glisse de la gauche au dessus de tout , où mettre la transition?
+     body nav  */
+    
+
+    /* changer la position sur le parent !! et non sur le a */
+    .main-nav div  {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+
+    div a {
+         
+        margin: 15px 0 15px;
+        display: block;
+        text-align: center;
+        font-size: 55px;
+        
+        /* mettre le texte au-dessus du bg???? */
+        
+        
+    }
+    
+
+    /* par defaut div block donc le remettre */
+    .burger-menu {
+        display: block;
+        
+    } 
+
+    body.--isActive nav {
+        transform:translateX(0);
+    }
+}
+
+
+
+
+@media screen and (min-width:1024px) {
+
+    /* cacher burger quand c'est un grand écran */
+    .burger-menu {
+        display: none;
+    }
+    .main-nav {
+        display: block;
+    }
+    
+}
+
+/* ********************** */
+
+/* transition: margin-right 2s ; ?? */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
