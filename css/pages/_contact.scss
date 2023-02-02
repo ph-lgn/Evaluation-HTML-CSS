@@ -1,0 +1,87 @@
+//  page contact avec map
+.map {
+    margin: 85px auto;
+}
+.map .wrapper{
+    margin: 55px auto;
+    
+}
+// div map flexée
+
+.flex-map {
+   @include flex-center;
+   margin-bottom: 35px;
+   iframe {
+    width: 100%;
+   }
+}
+
+//  formumaire en grid
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+.formulaire {
+    grid-column: 1 / 3;
+}
+form label, input, textarea{
+    background: #f4f4f4;
+    width: 100%;
+    
+}
+textarea {
+    margin-bottom: 20px;
+}
+input {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+input[placeholder="Enter Message"] {
+    margin-bottom: 45px;
+}
+.name-mail {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    
+    div {
+        width: 100%;
+    }
+
+}
+
+.formulaire a {
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    padding: 15px 35px;
+    text-transform: uppercase;
+}
+
+// adresse en grid et flex
+.adresse {
+    @include flex-center;
+    flex-direction: column;
+}
+.flex-adresse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px ;
+    margin-bottom: 25px;
+    h5 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    h6 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: #6b6767;
+    }
+}
+
