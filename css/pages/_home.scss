@@ -30,6 +30,10 @@
     }
    
 }
+
+
+
+
 // txt dans les images  
 
 .txt-abs1, .txt-abs {
@@ -108,6 +112,57 @@
     height: 100%;
     border-radius: 10px;
     
+}
+// ********************************** responsive de la partie 2
+// *************************************************************
+
+// palier 950px
+
+@media screen and (max-width:990px){
+    .article-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        .bloc-img-text2 {
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap: 25px;
+        }
+        .abs-text{
+            position: relative;
+            border-radius: 25px;
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+// palier 570px
+
+@media screen and (max-width:570px){
+    .article-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        .txt-abs1 a{
+            font-size: 12px;
+        }
+        .bloc-img-text2 {
+            display: grid;
+            grid-template-columns:1fr;
+            gap: 25px;
+        }
+        .abs-text{
+            position: relative;
+            border-radius: 25px;
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
 }
 
 
