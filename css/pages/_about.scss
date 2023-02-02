@@ -38,6 +38,7 @@
 }
 
 
+// ----------------------------------------------------------------------------------
 //  2 before footer bg page about avec différent bg
 
 .before-footer-abs{
@@ -99,7 +100,110 @@
 
 }
 
-//  ******** 4 grid de 3 images  : team members
+// ******************************* responsive 
+//**********************************************
+// ***************************************
+@media screen and (max-width:990px){
+    .before-footer-abs{
+        height: 1210px; 
+    }
+    
+    .wrap-before-abs {
+        width: 50%;
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        color: white;
+        .txt-services {
+            width: 30%;
+            span {
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            h1 {
+                font-size: 45px;
+                font-weight: 700;
+            }
+            p {
+                margin-bottom: 55px;
+            }
+            a {
+                color: white;
+                background: rgb(167, 45, 45);
+                padding: 15px 25px;
+                text-decoration: none;
+            }
+        }
+    
+    }
+}
+@media screen and (max-width:570px){
+    .before-footer-img{
+       @include flex-center;
+        width: 80%;
+        img { 
+            width: 100%;
+        }
+       
+    }
+    .before-footer-abs{
+       
+        .wrap-bg {
+            height: 100%;
+            display: flex;
+        .bg-red {
+                background: red;
+                width: 100%;
+                height: 100%;
+        }
+            .bg-black {
+                display: none;
+            }
+    
+        }
+     
+    
+    }
+    .wrap-before-abs {
+     
+        .txt-services {
+            width: 80%;
+            span {
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            h1 {
+                font-size: 45px;
+                font-weight: 700;
+            }
+            p {
+                margin-bottom: 55px;
+            }
+            a {
+                color: red;
+                background: rgb(0, 0, 0);
+                padding: 15px 25px;
+                text-decoration: none;
+            }
+        }
+    
+    }
+}
+
+
+
+
+//  ---------------------------------- partie 4 : grid de 3 images  : la team members
 .team-mambers {
     height: 800px;
     display: flex;
@@ -194,5 +298,65 @@
 }
 
 
+// ****************************** responsive team members portraits
+//***************************************************************
 
+@media screen and (max-width:990px){
+    .team-mambers {
+        height: 1200px;
+        margin: 80px auto;
+        span {
+            color:white;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    
+    }  
+    .wrap-title-members span:nth-of-type(1):before {  
+        content: "";
+        background: white;
+        
+    }
+
+    .wrap-img-members {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        
+        img {
+            width: 100%;
+           
+        }
+    }
+}
+
+@media screen and (max-width:570px){
+    .team-mambers {
+        height: 200vh;
+        margin: 90px auto;
+
+        span {
+            color:white;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    
+    }  
+    .wrap-title-members span:nth-of-type(1):before {  
+        content: "";
+        background: white;
+        
+    }
+
+    .wrap-img-members {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        
+        img {
+            width: 100%;
+           
+        }
+    }
+}
    

@@ -117,13 +117,17 @@
 // *************************************************************
 // *************************************************************
 
-// palier 950px
+// palier 990px
 
 @media screen and (max-width:990px){
     .article-top {
         display: grid;
         grid-template-columns: 1fr;
         gap: 25px;
+        width: 100%;
+        img {
+            width: 100%;
+        }
         .bloc-img-text2 {
             display: grid;
             grid-template-columns:repeat(2, 1fr);
@@ -145,12 +149,14 @@
 @media screen and (max-width:570px){
     .article-top {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 25px;
+  
+      
         .txt-abs1 a{
             font-size: 12px;
         }
+        
         .bloc-img-text2 {
+          
             display: grid;
             grid-template-columns:1fr;
             gap: 25px;
@@ -168,7 +174,7 @@
 
 // -----------------------------------------------------------
 // ******************  3 ARTICLE EN GRID dans un grid avec du grid ouch! *********
-
+// -----------------------------------------------------------------
 // tout le tableau complet en grid
 
 .article-middle {
@@ -285,7 +291,7 @@
     padding: 25px;
 }
 
-// col droite : fans nombre + article en-dessous
+// colonne de droite : fans en nombre + article en-dessous "most "
 
 .fans-table {
     display: grid;
