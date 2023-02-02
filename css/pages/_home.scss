@@ -113,7 +113,8 @@
     border-radius: 10px;
     
 }
-// ********************************** responsive de la partie 2
+// ********************************** responsive de la partie 2 
+// *************************************************************
 // *************************************************************
 
 // palier 950px
@@ -165,8 +166,8 @@
 
 }
 
-
-// ******************  3 ARTICLE EN GRID dans un grid avec du grid ouch!
+// -----------------------------------------------------------
+// ******************  3 ARTICLE EN GRID dans un grid avec du grid ouch! *********
 
 // tout le tableau complet en grid
 
@@ -389,8 +390,58 @@
     }
   }
 }
+// ********************************** responsive de la partie 3
+//  *************************************************************
+//  *************************************************************
 
-// *********  4 ARTICLE EN GRID mais sur une ligne avec pub avant travel europe
+// palier 990px
+@media screen and (max-width:990px) {
+    .article-middle {
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    
+    
+// palier 570 px
+@media screen and (max-width:570px){
+.wrap-sans-pub {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    .new1 {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .new2 {
+        width: 100%;
+        .link-news{
+            display: none;
+        }
+        .flex-new{
+            width: 80%;
+        }   
+    }
+        
+    }
+    .wrap-news {
+         .pub-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+    }
+   
+
+
+}
+}
+
+// *********  4 ARTICLE EN GRID mais sur une ligne avec pub avant travel europe******
 
 .article-bottom {
     display: grid;
@@ -433,9 +484,50 @@
         width: 100%;
     }
 }
+// ********************************** responsive de la partie 4
+// *************************************************************
+// *************************************************************
+@media screen and (max-width:990px) {
+    .article-bottom {
+        grid-template-columns: 1fr;
+       
+        .pub-left {
+            display: none;
+            
+        }
+        
+    
+    }  
+
+    .wrap-article-bottom {
+       
+        gap: 25px;
+        .new1:nth-of-type(1) {
+            display: none;
+        }
+        .news1 img {
+        width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:570px) {
+    .wrap-article-bottom {
+        gap: 25px;
+        .new1:nth-of-type(1) {
+            display: none;
+        }
+        .new1:nth-of-type(2) {
+            display: none;
+        }
+        img {
+        width: 100%;
+        }
+    }
+}
 
 
-// *********  5 ARTICLE EN GRID bande blache trending news
+// *********  5 ARTICLE EN GRID bande blache trending news******************
 
 .trending-news{
     background: white;
@@ -499,4 +591,78 @@
     }
 }
 
+// ********************************** responsive de la partie 5
+// *************************************************************
+// *************************************************************
+@media screen and (max-width:990px) {
+    .wrap-trending {
+       
+       .trending {
+        width: 100%;
+        padding: 15px;
+       }
+        img {
+            width: 100%;
+        }
+       }  
+    .trending:nth-of-type(1){
+        display: none;
+    }
+    .bg-wrap-abs {
+        width: 80%;
+        height: 60%;
+        background: white;
+        padding: 15px;
+        a {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            color: red;
+            @include transi;
+    
+        }
+        span{
+            font-size: 14px;
+        }
+        .flex-icone-play {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            a {
+              
+                text-decoration: none;
+                color: rgb(163, 151, 151);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:570px) {
+    .wrap-trending {
+       
+        .trending {
+         width: 100%;
+        }
+         img {
+             width: 100%;
+         }
+        }  
+     .trending:nth-of-type(1){
+         display: none;
+     }
+     .trending:nth-of-type(2){
+         display: none;
+     }
+     
+}
+
+// ********************************** responsive de la partie 5
+// *************************************************************
+// *************************************************************
 

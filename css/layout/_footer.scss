@@ -1,9 +1,13 @@
 // *********** 6 before footer 
-.before-footer {
-    height: 250px;
+
+.before-footer .pub-banner{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 25px auto;
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -60,4 +64,32 @@ footer {
 }
 }
 
+// *************************** responsive footer
+// palier 990px
 
+@media screen  and(max-width:990px){
+    footer {
+    height: 100vh;    
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+           
+        }
+    }
+    
+   
+}
+@media screen  and(max-width:570px){
+    footer {
+        height:1210px;
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+    }
+    
+ 
+    
+}
