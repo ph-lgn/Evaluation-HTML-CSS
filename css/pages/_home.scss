@@ -1,4 +1,6 @@
-// *********  2 ARTICLE EN GRID DE LA HOME
+// homepage
+
+// *************************  2 ARTICLE EN GRID DE LA HOME
 
 .article-top {
     padding-top: 35px;
@@ -26,46 +28,75 @@
         position: relative;
         border-radius: 25px;
     }
+   
 }
+// txt dans les images  
 
 .txt-abs1, .txt-abs {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    transform: translate(-60%, -50%);
+    width:80%;
     height: 100%;
     color: white;
-    h2 {
-        margin: 0;
-    }
-    span {
+    span:nth-of-type(2) {
         color: #c2c2c2;
+        font-size: 13px;
     }
+    span:nth-of-type(1) {
+        color: white;
+        font-size: 13px;
+        padding: 5px 18px;
+        background: blue;
+        align-self: flex-start;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
     a{
         color: white;
         text-decoration: none;
-        font-size: 12px;
-        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    a:hover {
+        @include transi;
+        color: red;
     }
 
+
 }
+
+// image de gauche
 
 .txt-abs1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 45px;
+    a{
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
     
 }
+// images de droite
+
 .txt-abs {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
+    a {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
     
 }
 
+// filtre sur les images
 
 .overlay::before {
     content: '';
@@ -80,26 +111,35 @@
 }
 
 
-// *********  3 ARTICLE EN GRID dans un grid avec du grid ouch!
+// ******************  3 ARTICLE EN GRID dans un grid avec du grid ouch!
 
-// tout le tableau grid
+// tout le tableau complet en grid
+
 .article-middle {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-   
 }
 
-// col gauche du grid avec du flex
+// colonne gauche du grid avec du flex
 
 .new1 {
+   
     width: 50%;
     h2 {
         margin: 0;
         margin-bottom: 35px;
     }
-    h3 {
+    a {
         font-size: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+    }
+    a:hover {
+        color: red;
+        @include transi;
+
     }
     span { 
         font-size: 12px;
@@ -110,6 +150,24 @@
     }
    
 }
+.wrap-title-new {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.scale-img-news {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.scale-img-news:hover img {
+    transform: scale(1.05);
+    @include transi;
+}
+
+
+
 
 .link-news {
     display: flex;
@@ -140,6 +198,7 @@
     img {
         width: 100%;
     }
+    
     div:nth-of-type(2) {
         display: flex;
         flex-direction: column;
@@ -152,7 +211,12 @@
         a {
             text-decoration: none;
             color: black;
+            font-weight: 600;
         }
+        a:hover {
+            @include transi;
+            color: red;
+           }
     }
     
    }
@@ -179,7 +243,7 @@
         gap: 15px ;
         display: flex;
         border: 1px solid rgb(194, 188, 188);
-        padding: 15px 55px;
+        padding: 15px 45px;
         .flex-nbre-fans {
             display: flex;
             flex-direction:column;
@@ -232,27 +296,42 @@
 
 .overlay2::before {
     content: '';
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514) 8%, rgba(11, 11, 122, 0.384) 58%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.514) 8%, rgba(11, 11, 122, 0.384) 70%);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 15px;
 }
 
 
 .article-grid-most {
   display: flex;
     width: 100%;
+    justify-content: flex-start;
  
   img {
-    width: 60%;
+    width: 80%;
+    border-radius: 15px;
   }
   .flex-most {
     padding: 15px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    a:hover {
+        color: red;
+        @include transi;
+
+    }
   }
 }
 
@@ -266,8 +345,23 @@
         img {
             width: 100%;
         }
+        a {
+            font-size: 18px;
+        }
+        a:hover {
+            color: red;
+            @include transi;
+    
+        }
+        
     }
 
+}
+.wrap-new1 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .grid-article-bottom {
@@ -324,14 +418,22 @@
     height: 30%;
     background: white;
     padding: 15px;
-    h5 {
+    a {
         font-size: 20px;
         margin: 0;
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: red;
+        @include transi;
+
     }
     span{
         font-size: 14px;
     }
     .flex-icone-play {
+        margin-top: 15px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

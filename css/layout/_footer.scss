@@ -41,8 +41,14 @@ footer {
         justify-content: space-between;
         margin-bottom: 35px;
         gap: 25px;
-        span {
+       a {
             color: white;
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            @include transi;
+            color: red;
         }
     }
 }

@@ -1,14 +1,44 @@
-//  our mission article
+// about page
+
+//  1 our mission article 
 .article-mission .wrapper {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    margin: 45px auto;
+    span {
+        position: relative;
+    }h3 {
+        font-size: 30px; 
+   
+    }   
+    p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+ 
 
 }
 
+.wrap-title-mission{
+    display: flex;
+    gap: 80px;
+    
+}
+.article-mission span::before {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 2px;
+    background: #eb566c;
+    top: 0;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 
-//  before footer bg page about avec différent bg
+//  2 before footer bg page about avec différent bg
 
 .before-footer-abs{
     height: 800px;
@@ -69,13 +99,44 @@
 
 }
 
-//  4 team members
+//  ******** 4 grid de 3 images  : team members
 .team-mambers {
     height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px auto;
+    span {
+        color:#eb566c;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
 }
+.wrap-title-members {
+    position: relative;
+    display: flex;
+    gap: 65px;
+}
+
+.wrap-title-members span:nth-of-type(1):before {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 2px;
+    background: #eb566c;
+    top: 0;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
 .wrap-img-members {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,10 +161,28 @@
         }
         span {
             margin-top: 15px;
-            color: red;
+            color: #eb566c;
             font-size: 13px;
         }
     }
+}
+.wrap-job {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.wrap-job span:nth-of-type(1)::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #eb566c;
+    top: 0;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .hover-img {
     overflow: hidden;
