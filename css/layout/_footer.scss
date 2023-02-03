@@ -77,7 +77,8 @@ footer {
 
 @media screen  and(max-width:990px){
     footer {
-    height: 100vh;    
+    height: 100vh;  
+    padding: 35px;  
         .wrapper {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -91,6 +92,7 @@ footer {
 @media screen  and(max-width:570px){
     footer {
         height:150vh;
+        padding: 35px; 
         .wrapper {
             display: grid;
             grid-template-columns: 1fr;
