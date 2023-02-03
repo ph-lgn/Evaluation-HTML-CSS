@@ -55,7 +55,7 @@
 
 // txt dans les images  
 
-.txt-abs1, .txt-abs {
+.txt-abs1, .txt-abs{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -159,23 +159,36 @@
     .article-top {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 25px;
         width: 100%;
-        img {
-            width: 100%;
+        padding: 35px;
+        .bloc-img-text1 {
+            margin-bottom: 15px;
+            .overlay {
+                width:100%;
+                img {
+                    width: 100%;
+                }  
+            }
         }
         .bloc-img-text2 {
             display: grid;
             grid-template-columns:repeat(2, 1fr);
             gap: 25px;
-        }
-        .abs-text{
-            position: relative;
-            border-radius: 25px;
-            a {
-                font-size: 12px;
+            .overlaya {
+                width: 100%;
+            }
+            .overlaya::before {
+                height: 60%;
+            }
+            div:nth-of-type(2) {
+                .txt-abs {
+                    top: 40%;
+                   justify-content: center;
+                   height: 25%;
+                }
             }
         }
+        
     }
 
 }
@@ -205,6 +218,7 @@
             }
         }
     }
+
 
 }
 
@@ -273,31 +287,24 @@
 }
 
 .new2 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     .img-news {
-        width: 100%;
+        width: 70%;
+        overflow: hidden;
     }
     img {
-        width: 100%;
+       width: 100%;
     }
-    div:nth-of-type(1) {
-       
-        font-weight: 600;
-        margin-bottom: 35px;
-        a {
-            padding-right: 5px;
-            text-decoration: none;
-            color: black;
-        }
-        a:nth-of-type(1) {
-            color: red;
-        }
-    }
+}
+
    .flex-new {
-     width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     img {
         width: 100%;
     }
@@ -305,7 +312,7 @@
     div:nth-of-type(2) {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         margin-bottom: 10px;
         font-size: 14px;
         span:nth-of-type(1) {
@@ -324,7 +331,7 @@
     }
     
    }
-}
+
 .wrap-sans-pub {
     display: flex;
     gap: 25px;
@@ -346,7 +353,7 @@
     .border-fans-table {
         gap: 15px ;
         display: flex;
-        border: 1px solid rgb(194, 188, 188);
+        border: 1px solid rgb(231, 231, 231);
         padding: 15px 45px;
         .flex-nbre-fans {
             display: flex;
@@ -374,23 +381,30 @@
     }
     img {
         width: 100%;
+        border-radius: 15px;
     }
 }
 
 .txt-recent {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 40%;
     transform: translate(-50%, -50%);
     color: white;
     a {
         text-decoration: none;
         color: white;
-        padding: 8px 20px;
+        padding: 8px 15px;
         background: rgb(175, 31, 175);
-        font-size: 15px;
+        font-size: 12px;
         border-radius: 10px;
         text-transform: uppercase;
+    }
+    h2 {
+        font-size: 16px; 
+    }
+    span {
+        font-size: 14px;
     }
 }
 
@@ -405,7 +419,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 98%;
     border-radius: 15px;
 }
 
@@ -447,11 +461,39 @@
     .article-middle {
         display: grid;
         grid-template-columns:1fr;
+        .wrap-link-life {
+            display: block;
+        }
+      
     }
+    .wrap-sans-pub {
+        display: grid;
+        grid-template-columns: 1fr;
+        .new1 {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .new2 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .link-news{
+                display: none;
+            }
+            .flex-new{
+                width: 80%;
+            }   
+        }
+            
+        }
     
     
 // palier 570 px
 @media screen and (max-width:570px){
+  
 .wrap-sans-pub {
     display: grid;
     grid-template-columns: 1fr;
@@ -474,12 +516,14 @@
         
     }
     .wrap-news {
-         .pub-banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
+        .pub-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
+            img {
+                width: 100%;
+            }
         }
     }
     }
@@ -487,9 +531,9 @@
 
 
 }
-}
 
-// *********  4 ARTICLE EN GRID mais sur une ligne avec pub avant travel europe******
+
+// *********  4 ARTICLE EN GRID mais sur une ligne avec pub mauve travel europe + 3 img******
 
 .article-bottom {
     display: grid;
@@ -503,10 +547,8 @@
             color: red;
             @include transi;
     
-        }
-        
+        } 
     }
-
 }
 .wrap-new1 {
     padding: 15px;
@@ -534,48 +576,60 @@
 @media screen and (max-width:990px) {
     .article-bottom {
         grid-template-columns: 1fr;
-       
         .pub-left {
-            display: none;
-            
+            display: none; 
         }
+        .wrap-new1 {
+          width: 180%;
+          a {
+            font-size: 16px;
+          }
+        }
+
+        
         
     
     }  
 
     .wrap-article-bottom {
-       
-        gap: 25px;
+      
         .new1:nth-of-type(1) {
             display: none;
         }
-        .news1 img {
+        .img-new1 {
         width: 100%;
+        }
+        img {
+            width: 100%;
         }
     }
 }
 
 @media screen and (max-width:570px) {
+    
     .wrap-article-bottom {
-        gap: 25px;
-        .new1:nth-of-type(1) {
-            display: none;
-        }
         .new1:nth-of-type(2) {
             display: none;
         }
+        .img-new1 {
+        width: 200%;
+        }
         img {
-        width: 100%;
+            width: 100%;
         }
     }
 }
 
 
-// *********  5 ARTICLE EN GRID bande blache trending news******************
+// *********  5 ARTICLE EN GRID bande blanche trending news avec icone play******************
 
 .trending-news{
     background: white;
     height: 500px;
+    h4 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
   
 }
 .wrap-trending {
@@ -586,6 +640,9 @@
     width: 30%;
     position: relative;
  
+   }
+   .img-trending {
+    width: 100%;
    }
     img {
         width: 100%;
@@ -610,7 +667,7 @@
     background: white;
     padding: 15px;
     a {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
         text-decoration: none;
         color: black;
@@ -621,7 +678,7 @@
 
     }
     span{
-        font-size: 14px;
+        font-size: 12px;
     }
     .flex-icone-play {
         margin-top: 15px;
@@ -688,8 +745,8 @@
 }
 
 @media screen and (max-width:570px) {
-    .wrap-trending {
-       
+    .trending-news {
+       height: 600px;
         .trending {
          width: 100%;
         }
@@ -705,8 +762,3 @@
      }
      
 }
-
-// ********************************** responsive de la partie 5
-// *************************************************************
-// *************************************************************
-
