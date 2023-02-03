@@ -138,17 +138,17 @@
 
 // filtre sur les images
 
-// .overlay::before {
-//     content: '';
-//     background: linear-gradient(0deg, rgb(0, 0, 0) 8%, rgba(0, 0, 0, 0.068) 58%);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 10px;
+.overlay::before, .overlay1::before, .overlaya::before {
+    content: '';
+    background: linear-gradient(0deg, rgb(0, 0, 0) 8%, rgba(0, 0, 0, 0.068) 58%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     
-// }
+}
 // ********************************** responsive de la partie 2 
 // *************************************************************
 // *************************************************************
@@ -273,9 +273,14 @@
 }
 
 .new2 {
-    
-    div:nth-of-type(1) {
+    .img-news {
         width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+    div:nth-of-type(1) {
+       
         font-weight: 600;
         margin-bottom: 35px;
         a {
@@ -305,11 +310,12 @@
         font-size: 14px;
         span:nth-of-type(1) {
             color: green;
+            font-weight: 400;
         }
         a {
             text-decoration: none;
             color: black;
-            font-weight: 600;
+            font-weight: 400;
         }
         a:hover {
             @include transi;
@@ -410,8 +416,8 @@
     justify-content: flex-start;
  
   img {
-    width: 80%;
-    border-radius: 15px;
+    width: 100%;
+    border-radius: 10px;
   }
   .flex-most {
     padding: 15px;
@@ -493,9 +499,6 @@
         img {
             width: 100%;
         }
-        a {
-            font-size: 18px;
-        }
         a:hover {
             color: red;
             @include transi;
@@ -519,8 +522,7 @@
 }
 .wrap-article-bottom {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     .new1 img {
         width: 100%;
