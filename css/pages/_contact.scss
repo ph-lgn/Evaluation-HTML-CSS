@@ -32,10 +32,16 @@ form label, input, textarea{
 }
 textarea {
     margin-bottom: 20px;
+    border: none;
+    outline: 1px rgb(189, 187, 187) solid;
+    padding: 10px;
+
 }
 input {
     padding: 15px;
     margin-bottom: 20px;
+    border: none;
+    outline: 1px rgb(189, 187, 187) solid;
 }
 
 input[placeholder="Enter Message"] {
@@ -58,23 +64,26 @@ input[placeholder="Enter Message"] {
     border: 1px solid red;
     padding: 15px 35px;
     text-transform: uppercase;
+    letter-spacing: 2px
+
 }
 
 // adresse en grid et flex
 .adresse {
-    @include flex-center;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    padding: 45px;
 }
 .flex-adresse {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 35px ;
+    gap: 25px ;
     margin-bottom: 25px;
     h5 {
         margin: 0;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 15px;
         margin-bottom: 10px;
     }
     h6 {
@@ -83,5 +92,95 @@ input[placeholder="Enter Message"] {
         font-weight: 400;
         color: #6b6767;
     }
+}
+
+// **************************** responsive page contact map
+// ***************************************************
+
+
+@media screen and (max-width:990px){
+    .map {
+        margin: 85px auto;
+    }
+  
+    // div map flexée
+    
+    .flex-map {
+       @include flex-center;
+       margin-bottom: 35px;
+       iframe {
+        width: 80%;
+       }
+    }
+    
+    //  formumaire en grid
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .formulaire {
+        width: 80%;
+    }
+    .adresse {
+        width: 80%;
+    }
+
+
+    
+    .formulaire a {
+        text-decoration: none;
+        color: red;
+        border: 1px solid red;
+        padding: 15px 35px;
+        text-transform: uppercase;
+    }
+    
+    // adresse en grid et flex
+    .adresse {
+    align-items: flex-start;
+    padding: 0px;
+    }
+    .flex-adresse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px ;
+        margin-bottom: 25px;
+      
+    }
+    
+    
+}
+
+
+@media screen and (max-width:570px){
+   
+    // div map non-affichée
+    
+    .flex-map {
+        display:none;
+    }
+    
+    // input passe en-dessous
+    .name-mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    
+    
+    // adresse en grid et flex
+    
+    .flex-adresse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px ;
+        margin-bottom: 25px;
+      
+    }    
+    
 }
 

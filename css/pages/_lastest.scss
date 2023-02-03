@@ -41,3 +41,110 @@
         
     }
 }
+
+// **************************** responsive page lastest
+// ***************************************************
+
+
+@media screen and (max-width:990px){
+    // bloc article avec image
+    // image plus article en dessous + share avec icones sociales
+.article-middle-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 45px auto;
+}
+
+.wrap-news-lastest {
+    grid-column: 1 / 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .new-category{
+        width: 80%;
+       
+    }
+  
+    
+    .img-lastest {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+   
+    h3 {
+        font-size: 35px;
+        font-weight: 600;
+        color: black;
+    }
+    p {
+        line-height: 25px;
+        font-size: 15px;
+        line-height: 25px;
+        color: rgb(94, 91, 91);
+    }
+
+    
+}
+
+.wrap-title-social {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+    .share-social {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        
+    }
+}
+
+    // bloc social
+    .wrap-title-social {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        justify-content: space-between;
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: black;
+        }
+    }
+    .share-social {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        
+    }
+    
+}
+
+
+
+@media screen and (max-width:570px){
+    // bloc social
+    .wrap-title-social {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        h3 {
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+        }
+    }
+    .share-social {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+}

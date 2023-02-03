@@ -4,7 +4,7 @@
 .article-mission .wrapper {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     margin: 45px auto;
     span {
         position: relative;
@@ -104,6 +104,12 @@
 //**********************************************
 // ***************************************
 @media screen and (max-width:990px){
+    // article 
+    .article-mission .wrapper {
+        width: 60%;
+
+    }
+    // before footer bg différent (oui mais c'est une photo je l'ai vue trop tard :-) )
     .before-footer-abs{
         height: 1210px; 
     }
@@ -147,6 +153,11 @@
     }
 }
 @media screen and (max-width:570px){
+     // article 
+     .article-mission .wrapper {
+        width: 70%;
+    }
+    // before-footer bg différents
     .before-footer-img{
        @include flex-center;
         width: 80%;
